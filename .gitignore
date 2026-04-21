@@ -12,3 +12,10 @@
 *.run.xml
 *.pdf
 *.xdv
+
+# Local working material — not for GitHub
+Proposal/
+AI/
+flowchart
+*.md
+!README.md
