@@ -1,16 +1,44 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage[style=oscola, language=american]{biblatex}
+\usepackage[style=oscola, 
+            language=american]{biblatex}
 \addbibresource{zotero.bib}
 \addbibresource{law.bib}
+\usepackage[style=british]{csquotes}
 \usepackage{fontspec}
+\usepackage{csquotes}
+\usepackage[english]{babel}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
 \setstretch{1.3}
-\geometry{a4paper, margin=1in}
+\geometry{a4paper, margin=0.8in}
 \setmainfont{Times New Roman}
-\newfontfamily\merriweather{Merriweather}
+\newfontfamily\merriweather{Merriweather}[
+  BoldFont = Merriweather-Bold,
+  ItalicFont = Merriweather-Italic,
+  BoldItalicFont = Merriweather-BoldItalic
+]
+
+\titleformat{\section}
+  {\merriweather\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\merriweather\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\merriweather\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\renewcommand{\cfttoctitlefont}{\merriweather\Huge\bfseries}
+\renewcommand{\cftsecfont}{\merriweather\bfseries}
+\renewcommand{\cftsubsecfont}{\merriweather}
+\renewcommand{\cftsubsubsecfont}{\merriweather}
+\renewcommand{\cftsecpagefont}{\merriweather\bfseries}
+\renewcommand{\cftsubsecpagefont}{\merriweather}
+\renewcommand{\cftsubsubsecpagefont}{\merriweather}
+
+\renewcommand{\footnoterule}{}
+\skip\footins 3pc
 
 \begin{document}
 
@@ -19,6 +47,25 @@
 \tableofcontents
 \newpage
 
-\input{Chapters/chapter_1}
+\input{Chapters/chapter_1.tex}
+\newpage
+
+\input{Chapters/chapter_2.tex}
+\newpage
+
+\input{Chapters/chapter_3.tex}
+\newpage
+
+\input{Chapters/chapter_4.tex}
+\newpage
+
+\input{Chapters/chapter_5.tex}
+\newpage
+
+\input{Chapters/chapter_6.tex}
+\newpage
+
+\input{Chapters/chapter_7.tex}
+\newpage
 
 \end{document}

@@ -1,21 +1,10 @@
 .DS_Store
-*.aux
-*.log
-*.out
-*.toc
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.bbl
-*.bcf
-*.blg
-*.run.xml
-*.pdf
-*.xdv
 
 # Local working material — not for GitHub
 Proposal/
 AI/
 flowchart
 *.md
-!README.md
+Output/
+.claude/
+*.code-workspace
