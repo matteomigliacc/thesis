@@ -4,7 +4,6 @@
 Proposal/
 AI/
 flowchart
-*.md
 Output/
 .claude/
 *.code-workspace
