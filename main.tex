@@ -1,35 +1,77 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage[style=oscola,
-            ibid=true,
-            language=american]{biblatex}
-\addbibresource{zotero.bib}
-\addbibresource{law.bib}
-\usepackage[style=british]{csquotes}
+
+% Fonts & language
 \usepackage{fontspec}
-\usepackage{csquotes}
 \usepackage[english]{babel}
+
+% Layout
 \usepackage{geometry}
-\usepackage[backgroundcolor=violet,textcolor=white,linecolor=black,bordercolor=white]{todonotes}
-\usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
 \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{tocloft}
-\setstretch{1.3}
-\geometry{a4paper, margin=0.8in}
-\setmainfont{Scala Pro}
-\usepackage[bottom]{footmisc} 
+\usepackage[bottom]{footmisc}
 
+% Graphics & margin notes
+\usepackage{graphicx}
+\usepackage[backgroundcolor=violet,
+            textcolor=white,
+            linecolor=black,
+            bordercolor=white]{todonotes}
+
+% Bibliography & quotations (OSCOLA)
+\usepackage[style=british]{csquotes}
+\usepackage[style=oscola,
+            ibid=true,
+            language=american,
+            indexing=cite]{biblatex}
+\addbibresource{zotero.bib}
+\addbibresource{law.bib}
+
+% Indexes for Tables of Cases / Legislation
+\usepackage{imakeidx}
+\makeindex[name=cases, title={Table of Cases}, intoc=true, columns=1]
+\makeindex[name=legislation, title={Table of Legislation}, intoc=true, columns=2]
+\DeclareIndexAssociation{eucases}{cases}
+\DeclareIndexAssociation{piltreaty}{legislation}
+\DeclareIndexAssociation{eutreaty}{legislation}
+\DeclareIndexAssociation{euregs}{legislation}
+\DeclareIndexAssociation{eudirs}{legislation}
+\DeclareIndexAssociation{eudecs}{legislation}
+
+% Hyperlinks (load last)
+\usepackage[hidelinks]{hyperref}
+
+% Table of Abbreviations
+\usepackage[acronym, nonumberlist, nopostdot, toc]{glossaries}
+\makeglossaries
+\loadglsentries{abbreviations}
+
+% Configuration
+\geometry{a4paper, margin=0.8in}
+\setstretch{1.3}
+\setmainfont{Scala Pro}
 \renewcommand{\footnoterule}{}
 \skip\footins 3pc
 
 \begin{document}
 
+\pagenumbering{roman}
 \input{titlepage}
 
 \tableofcontents
 \newpage
 
+\printglossary[type=\acronymtype, title={Table of Abbreviations}]
+\newpage
+
+\printindexearly[cases]
+\newpage
+
+\printindexearly[legislation]
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \input{Chapters/chapter_1.tex}
 \newpage
 
