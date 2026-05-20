@@ -1,0 +1,1 @@
+Split bibliography.bib into zotero.bib (auto) and law.bib (manual legal sources). Updated main.tex to load both. Wrote first version of the introduction subsection in chapter 1.
