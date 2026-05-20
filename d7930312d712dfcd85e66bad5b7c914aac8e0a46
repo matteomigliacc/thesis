@@ -1,0 +1,1 @@
+On branch introrewrite: cut the literature-review section out of chapter 1 entirely (net -60 lines), to be folded into a tighter introduction. Net subtraction is the headline of this commit.
