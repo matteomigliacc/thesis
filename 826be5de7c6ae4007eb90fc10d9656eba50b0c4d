@@ -1,0 +1,1 @@
+Applied the \texorpdfstring{...}{...} pattern to chapter 2 section titles that needed \\ line breaks in the printed heading without breaking the ToC entry.
