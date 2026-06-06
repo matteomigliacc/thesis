@@ -73,9 +73,10 @@ dot, toc]{glossaries}
 
 \begin{document}
 
-\pagenumbering{roman}
+\renewcommand*{\thepage}{Title Page}   % PDF page-label for the title page
 \input{titlepage}
 
+\pagenumbering{roman}
 \tableofcontents
 \newpage
 
