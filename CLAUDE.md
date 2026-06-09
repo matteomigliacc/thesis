@@ -22,44 +22,6 @@ Matteo Migliaccio (1862669), LLM Law and Technology, Utrecht University.
 
 ---
 
-## Supervisor Feedback on Proposal (March 2026)
-
-Proposal passed. One-line summary of points to address:
-
-1. **Broader context:** connect LSA dominance to consistent enforcement + **principle of proximity** — not just Lynskey & Gentile.
-2. **Craig's three functions of reason-giving (2012):** transparency / judicial review / forcing decision-maker reflection — link to duty of care.
-3. **Broaden "scope-setting":** include **early consensus finding** generally (preliminary views/findings on other enforcement elements).
-4. **Consequences sub-question:** address what follows when careful/reasoned decision-making standards are not met.
-5. **CJEU case law beyond data protection:** general administrative law on the right to reasoned and careful decision-making.
-
-## Supervisor Feedback on Draft (Chapters 1–2, May 2026)
-
-Inline `\todo` notes left in `chapter_1.tex` and `chapter_2.tex`. To resolve before the 1 June draft deadline. Anchors below refer to subsection/subsubsection names, not line numbers.
-
-### Chapter 1 — Introduction
-
-- *Peer Pressuring the LSA into Action?* — also frame the EDPB as contributing through **decision-making** via dispute resolution, not only peer pressure.
-- *Peer Pressuring the LSA into Action?* — make explicit that enforcement is what turns law on paper into reality, hence protects fundamental rights.
-- *The Principle of Good Administration as a Benchmark* — state early that Art. 41 CFR binds only EU institutions/bodies/offices/agencies; only the **general principle** binds Member States.
-- *The Duty of Care* — the simple definition of duty of care is broader than careful decision-making. Either widen scope or explicitly flag the narrower focus and acknowledge there is more.
-- *Outline* — still to be written.
-
-### Chapter 2 — General Principle of Good Administration
-
-- *Good Administration as a General Principle of EU Law* — sub-principles were determined **before** the CFR entered into force; rephrase accordingly, and flag Art. 41 CFR's inapplicability to MSs earlier in the chapter.
-- *Coexistence of Good Administration as a General Principle and as a CFR Right* — reconsider framing as "problematic": broader principles applying to MSs may be a **good** thing; they have equal weight.
-- *Good Administration in the European Composite Administrative Enforcement Model* (chapter opener) — take the reader by the hand: link back to the research topic and explain why this groundwork matters. Add a **Hofmann** reference here.
-- *The Composite Administrative Enforcement Model* — link to a **GDPR case** illustrating horizontal cooperation (DPA↔DPA) and vertical cooperation (DPA↔EDPB).
-- *The 'Judicialisation' of the Administration* — if word count gets tight, can be integrated more briefly into the *General Principle of EU Law* subsection.
-- *A Limitation on the Administration's Discretionary Power* — check for repetition with earlier subsections.
-- *The Duty of Care of the Administration* and *The Duty to Give Reasons of the Administration* — these are the **benchmark sections** of the thesis. Expand with more literature and case law where possible.
-- *The Duty of Care of the Administration* — include **decision-making** in the duty of care scope (broader definition, see ch. 1 note).
-- *The Duty to Give Reasons of the Administration* — current text covers the **rationale** of reason-giving. Develop a framework for what counts as **sufficient** reasoning.
-- *The Collective Duty of Data Protection Authorities to Deliver Careful and Reasoned Decisions* — placement is uncertain; consider integrating into prior section or moving to ch. 3.
-- *The Collective Duty of Enforcement* (Matteo's own note) — discuss **subsidiarity and proximity** here; connect to **Hofmann** on composite decision-making.
-
----
-
 ## AI Use Rules (Utrecht University — Strict)
 
 ### Claude MAY
