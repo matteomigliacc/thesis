@@ -26,8 +26,9 @@
             ibid=true,
             language=american,
             indexing=cite]{biblatex}
-\addbibresource{zotero.bib}
-\addbibresource{law.bib}
+\addbibresource{bibliography/zotero.bib}
+\addbibresource{bibliography/law.bib}
+\input{bibliography/bibcategories}   % bibliography section definitions (categories)
 % Let long URLs/DOIs in the bibliography wrap instead of overflowing the margin.
 \setcounter{biburlnumpenalty}{9000}   % break after digits
 \setcounter{biburlucpenalty}{8000}    % break after uppercase
@@ -48,8 +49,7 @@
 \usepackage[hidelinks]{hyperref}
 
 % Table of Abbreviations
-\usepackage[acronym, nonumberlist, nopost
-dot, toc]{glossaries}
+\usepackage[acronym, nonumberlist, nopostdot, toc]{glossaries}
 \makeglossaries
 \loadglsentries{abbreviations}
 
@@ -113,8 +113,6 @@ dot, toc]{glossaries}
 \input{Chapters/chapter_7.tex}
 \newpage
 
-\printbibliography[nottype=jurisdiction, 
-                   nottype=legislation, 
-                   nottype=legal]
+\input{bibliography/bibliography}   % typed bibliography (prints category sections)
 
 \end{document}
