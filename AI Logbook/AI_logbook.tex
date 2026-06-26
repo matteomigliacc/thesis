@@ -1,0 +1,52 @@
+\begin{appendices}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\section{AI Logbook}
+
+\subsection{Use of Generative AI}
+
+Generative AI will be used for minor tasks such as brainstorming, proofreading, and helping with surfacing relevant points in the literature to explore. 
+Anthropic's Claude Sonnet and Opus models will be employed, with their thinking mode enabled. 
+Claude will be used with a Pro subscription inside of Claude Code\autocite{HowClaudeCode} and Cowork.\autocite{GetStartedCowork}
+
+Claude Code and Cowork allow the user to position the program, running locally, within a defined folder.\autocite{HowClaudeCode}
+These tools allow for the model to have specific instructions on how to operate, giving it context into the precise work of the user that's being conducted within that folder.\autocite{HowClaudeRemembers}
+This is done through a CLAUDE.md file.\autocite{HowClaudeRemembers}
+These instructions constrain the model into acting in specific ways, in light of the guidelines for Responsible AI use, making Claude act as a brainstorm companion.
+The CLAUDE.md file used during the writing process will be shown in the next section.
+
+Claude will also be able to find sources that have been already manually added into my Zotero library through an \gls{mcp} server.\autocite{yu54yyyuZoteromcp2026}
+An \gls{mcp} server is an open-source standard that allows AI tools to integrate databases and other tools in a structured way.\autocite{WhatModelContext}
+Claude will be able to access notes and annotations done within Zotero, as well as the full text of the sources saved in the library.
+Searches can be done through traditional textual search, or semantic search, which allows for finding sources that are conceptually similar to the query, even if they do not contain the same words.
+This will help ground the model into the correct sources and limit hallucinations.
+
+\subsection{CLAUDE.md File}
+\input{AI Logbook/AI_logbook_claudemd.tex}
+
+\newpage
+
+\subsection{Reflection on the Use of AI}
+
+I have found the use of Claude generally positive in the thesis writing process.
+At the start of the thesis, I decided I would try to learn a typesetting language used in academia, LaTeX, to produce a more professional-looking thesis.
+While a lot of the learning was done through good old Google searches, I found that Claude was able to provide me with more structured and detailed explanations of the LaTeX commands I needed to use.
+I feel quite proficient in LaTeX now, and Claude has contributed to that. 
+However, I am quite a tech savvy person, and I can generally read code and understand what's happening.
+If someone completely new to coding were to use AI to learn LaTeX, I think they would find it more difficult to understand what's going on, and they would actually need to learn the language themselves, rather than relying on AI to do it for them.
+
+Writing my thesis in LaTeX has been very fun and allowed me to have almost complete control over the formatting of my thesis.
+It also allowed me to have fully automated OSCOLA citations, Bibliographies, and Indexes. 
+My thesis is also fully hyperlinked, with acronyms and sections linked to each other.
+
+In the writing process, AI only proved useful with a lot of hand holding.
+I had to provide Claude with very specific instructions that only I could provide, as I knew the direction I wanted to take my thesis in. 
+Most times, I walked away from using Claude without actually following any of what it had proposed (structures, flows, etc), but conversing with it helped me brainstorm with myself and think about the structure of my thesis.
+
+My thesis is uploaded on GitHub, so that I could have version control and track changes at a very granular level. 
+Claude helped me summarize the edits I had made to each new "version" (commit) of my thesis, being able to see which lines of text were added and removed. 
+I have also built scripts that allow me to count words precisely, and make graphs of the progress of my thesis over time, which has been fun to do.
+
+\input{AI Logbook/AI_logbook_table}   % Session Log subsection + landscape session table
+
+\end{appendices}

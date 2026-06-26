@@ -1,0 +1,323 @@
+% CLAUDE.md working-context file, converted to LaTeX for the AI logbook appendix.
+% This is a FRAGMENT: it has no preamble and is meant to be \input inside the
+% appendices, as a \subsection sibling of "Use of Generative AI".
+%
+% Relies only on packages already loaded by thesis.tex:
+%   array  (>{\raggedright\arraybackslash}p{} columns), enumitem (list labels),
+%   longtable (page-breaking tables).  No new packages required.
+%
+% Heading levels here: \subsection (the file) -> \subsubsection (its ## headings)
+% -> \paragraph (its ### headings). Note: with tocdepth=4 in thesis.tex, the
+% \paragraph headings will show up in the Table of Contents. If you want the
+% appendix kept out of that fine detail, star them: \subsubsection* / \paragraph*.
+
+%----------------------------------------------------------------------
+\subsubsection{About}
+
+Matteo Migliaccio (1862669), LLM Law and Technology, Utrecht University.
+
+\textbf{Topic:} GDPR cross-border enforcement and the Procedural Regulation
+(Reg. 2025/2518), assessed against the general principle of good administration
+under EU law.
+
+\textbf{Central argument:} The GDPR's cross-border enforcement suffers from
+structural flaws --- chiefly the LSA's unilateral control over investigation
+scope, leaving SACs and the EDPB with no evidentiary record to act on.
+Reg. 2025/2518 introduces early consensus finding and procedural deadlines. The
+thesis assesses whether these mechanisms adequately curb LSA discretionary power
+against the duty of care and duty to give reasons under the objective GPL of good
+administration.
+
+%----------------------------------------------------------------------
+\subsubsection{Research Questions}
+
+\textbf{Main RQ:} To what extent does Regulation 2025/2518 curb LSAs'
+discretionary powers in light of the duty of care and duty to give reasons under
+the general principle of good administration in the context of composite
+cross-border enforcement of the GDPR?
+
+\begin{itemize}
+  \item \textbf{SQ1:} What do the duty of care and duty to give reasons require
+        of DPAs in cross-border GDPR enforcement?
+  \item \textbf{SQ2:} What changes does the Procedural Regulation bring to the
+        GDPR's cooperation and consistency mechanism?
+  \item \textbf{SQ3:} Are earlier consensus finding and new procedural deadlines
+        under Reg. 2025/2518 adequate to fulfil the duty of care of DPAs?
+  \item \textbf{SQ4:} Will earlier consensus finding and new procedural deadlines
+        contribute to respecting the duty to give reasons in composite
+        administrative proceedings involving the EDPB?
+  \item \textbf{SQ5:} What consequences stem from a failure to observe the
+        principle of good administration for the protection of fundamental rights
+        in the context of cross-border enforcement of the GDPR?
+\end{itemize}
+
+%----------------------------------------------------------------------
+\subsubsection{AI Use Rules (Utrecht University --- Strict)}
+
+\paragraph{Claude MAY}
+\begin{itemize}
+  \item Diagnose structural gaps, missing steps, weak justifications, missing sources
+  \item Suggest structure, outline alternatives, map argument flow
+  \item Ask questions that help Matteo identify what to write
+  \item Help locate academic sources (Zotero semantic search, boolean strings)
+  \item Brainstorm angles and approaches
+\end{itemize}
+
+\paragraph{Claude MUST NOT}
+\begin{itemize}
+  \item Write thesis text, arguments, or literature/case law summaries
+  \item Rewrite or paraphrase Matteo's own text
+  \item Generate footnotes or source summaries for direct incorporation
+  \item Grammar/style checking until after the final draft is submitted and discussed
+\end{itemize}
+
+\textbf{Matteo writes everything himself. Claude provides pointers, not prose.}
+
+\paragraph{AI log}
+Remind Matteo to update his AI interaction log at the end of every substantive
+session. Log: \texttt{./AI/}
+
+%----------------------------------------------------------------------
+\subsubsection{Deadlines}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.68\textwidth}
+                    >{\raggedright\arraybackslash}p{0.22\textwidth}@{}}
+  \hline
+  \textbf{Milestone} & \textbf{Date} \\
+  \hline
+  \endhead
+  Full thesis draft (complete with conclusions, footnotes, bibliography, ToC)
+    & \textbf{1 June 2026} \\
+  Final thesis submission (PDF via Brightspace)
+    & \textbf{26 June 2026} \\
+  Reflection report
+    & \textbf{1 July 2026} \\
+  \hline
+\end{longtable}
+
+%----------------------------------------------------------------------
+\subsubsection{Requirements}
+
+\begin{itemize}
+  \item \textbf{Word count:} 12,500--17,500 (footnotes included;
+        bibliography / ToC / title page / abbreviations / annexes excluded).
+        Target $\sim$15,000.
+  \item \textbf{Citation style:} OSCOLA throughout
+  \item \textbf{Font:} Calibri or TNR, 12pt, justified, 1.3--1.5 line spacing,
+        space between paragraphs
+  \item \textbf{Cover page:} programme, title, name + student number, word count,
+        supervisor + second reader, submission date
+  \item \textbf{Submission:} PDF via Brightspace
+  \item \textbf{Versioning:} Keep multiple versions of text (required under
+        Utrecht AI policy)
+\end{itemize}
+
+%----------------------------------------------------------------------
+\subsubsection{File Locations}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}
+                    >{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+  \hline
+  \textbf{Thing} & \textbf{Path} \\
+  \hline
+  \endhead
+  \textbf{This folder} (thesis root, LaTeX project, git-tracked)
+    & \texttt{\textasciitilde/Documents/thesis/} locally;
+      \texttt{/home/user/thesis/} in Claude Code on the web. Relative paths below
+      are unaffected. \\
+  GitHub remote
+    & configured on \texttt{origin/main} \\
+  Main LaTeX entrypoint
+    & \texttt{./thesis.tex} \\
+  Title page
+    & \texttt{./titlepage.tex} \\
+  Chapter files
+    & \texttt{./Chapters/chapter\_1.tex} \ldots{} \texttt{chapter\_7.tex} \\
+  Acronyms / glossary entries
+    & \texttt{./abbreviations.tex} --- loaded by \texttt{glossaries} via
+      \texttt{\textbackslash{}loadglsentries\{abbreviations\}} in
+      \texttt{thesis.tex} \\
+  Bibliography
+    & \texttt{./bibliography/zotero.bib} (auto-generated by Zotero) +
+      \texttt{./bibliography/law.bib} (manual entries) --- OSCOLA via biblatex \\
+  latexmk config
+    & \texttt{./.latexmkrc} --- pins xelatex, sends artifacts to
+      \texttt{Output/}, regenerates glossary/index aux files \\
+  Compiled output (PDF, aux files)
+    & \texttt{./Output/} (latexmk build dir, gitignored) \\
+  Figures
+    & \texttt{./Figures/} \\
+  Proposal folder (gitignored, reference only)
+    & \texttt{./Proposal/} \\
+  Submitted proposal
+    & \texttt{./Proposal/Thesis Proposal -- Migliaccio.docx} \\
+  Proposal draft + comments
+    & \texttt{./Proposal/Draft/} \\
+  Supervisor feedback (gitignored)
+    & \texttt{./Proposal/supervisor-feedback-2026-03-13.md} \\
+  AI session logs (gitignored)
+    & \texttt{./AI/} \\
+  \textbf{Obsidian thesis notes}
+    & \texttt{\textasciitilde/Library/Mobile Documents/iCloud\textasciitilde{}md\textasciitilde{}obsidian/Documents/Matteo's Notebook/00 - Thesis Trajectory/} \\
+  Introduction template
+    & \texttt{.../Proposal/Introduction template.md} (Obsidian) \\
+  Literature reading notes
+    & \texttt{.../Literature/Notes/} (Obsidian) \\
+  Admin docs
+    & \texttt{.../Admin/} (Obsidian) \\
+  \hline
+\end{longtable}
+
+The gitignored locals (\texttt{Proposal/}, \texttt{AI/}, \texttt{flowchart/},
+\texttt{Output/}, \texttt{.claude/}) and the Obsidian paths only exist on
+Matteo's machine --- they are absent in Claude Code on the web sessions, so don't
+assume their contents are readable from the cloud.
+
+%----------------------------------------------------------------------
+\subsubsection{Document Structure}
+
+Each chapter: \textbf{intro preview $\rightarrow$ doctrine $\rightarrow$ analysis
+$\rightarrow$ conclusion feeding into the next chapter.}
+
+\textbf{Introduction (chapter 1) --- current structure:}
+
+\begin{enumerate}
+  \item \textit{Background, Problem, and Analytical Framework} --- integrates lit
+        review by substantive point. Subsubsections: Enforcement Challenges of the
+        GDPR; The Procedural Regulation; Peer Pressuring the LSA into Action?; The
+        Principle of Good Administration as a Benchmark; The Duty of Care; The Duty
+        to Give Reasons
+  \item \textit{Research Gap}
+  \item \textit{Research Questions} (main RQ + 5 sub-RQs)
+  \item \textit{Methodology} --- Methods; Limitations; Use of Generative AI
+  \item \textit{Outline}
+\end{enumerate}
+
+\textbf{General chapters:} each linked to a sub-question. Opens with what the
+chapter will do, closes with what it showed and how it feeds into the RQ.
+
+\textbf{Conclusion:} restate problem + RQ $\rightarrow$ summarize chapter findings
+$\rightarrow$ state answer $\rightarrow$ limitations + future research.
+
+%----------------------------------------------------------------------
+\subsubsection{Key Scholars \& Concepts}
+
+\textbf{Scholars:} Lynskey \& Gentile (GDPR enforcement flaws), Paul Craig (three
+functions of reason-giving, 2012), Evans (right to good administration), Mihaescu,
+Mustert (supervisor)
+
+\textbf{Institutions:} LSA, SAC, EDPB, DPAs, CJEU, EDPS
+
+\textbf{Concepts:} composite administrative proceedings, OSS mechanism,
+consistency mechanism, duty of care, duty to give reasons, GPL of good
+administration, Regulation 2025/2518, principle of proximity, early consensus
+finding
+
+\textbf{Zotero search tips:} Use semantic search first. Good queries: ``lead
+supervisory authority discretion'', ``EDPB composite procedure'', ``duty to give
+reasons DPA'', ``good administration GDPR enforcement'', ``principle of proximity
+data protection'', ``Paul Craig reason giving''
+
+%----------------------------------------------------------------------
+\subsubsection{LaTeX \& Git Conventions}
+
+\begin{itemize}
+  \item Thesis is written in LaTeX, edited in VS Code. Draft lives in
+        \texttt{Chapters/chapter\_*.tex}, compiled via \texttt{thesis.tex}.
+  \item Before suggesting LaTeX commands, check \texttt{thesis.tex} preamble for
+        loaded packages --- don't assume what's available.
+  \item When introducing an acronym, define it once in \texttt{abbreviations.tex}
+        and reference it in prose with \texttt{\textbackslash{}gls\{key\}}.
+        Existing keys: \texttt{gdpr}, \texttt{eu}, \texttt{ms}, \texttt{dpa},
+        \texttt{oss}, \texttt{lsa}, \texttt{sa}, \texttt{sac}, \texttt{edpb},
+        \texttt{edps}, \texttt{cfr}, \texttt{tfeu}, \texttt{cjeu}, \texttt{mcp}.
+  \item \texttt{.gitignore} excludes \texttt{.DS\_Store}, \texttt{Proposal/},
+        \texttt{AI/}, \texttt{flowchart}, \texttt{Output/}, \texttt{.claude/}, and
+        \texttt{*.code-workspace}.
+  \item Do not commit on Matteo's behalf unless asked. When asked, use clear
+        present-tense messages (e.g., \texttt{add duty of care scaffold to
+        chapter 2}).
+  \item Never run \texttt{git push -{}-force}, branch deletions, or destructive
+        resets without explicit confirmation.
+\end{itemize}
+
+\paragraph{Build \& compilation}
+\begin{itemize}
+  \item \textbf{Command:} \texttt{latexmk thesis.tex} from the repo root.
+        \texttt{.latexmkrc} selects \texttt{xelatex} (required by \texttt{fontspec}
+        + the Scala Pro mainfont) and writes artifacts to \texttt{Output/}.
+  \item \textbf{Glossary + indexes:} \texttt{thesis.tex} loads \texttt{glossaries}
+        (acronyms from \texttt{abbreviations.tex}) and \texttt{imakeidx} with two
+        indexes --- \texttt{cases} and \texttt{legislation} --- wired into
+        biblatex-oscola via \texttt{indexing=cite}. \texttt{.latexmkrc} adds custom
+        dependencies so latexmk regenerates \texttt{.gls}/\texttt{.acr} and rebuilds
+        the indexes automatically; a single \texttt{latexmk} run is enough.
+  \item \textbf{Bibliography:} biblatex with \texttt{style=oscola},
+        \texttt{ibid=true}. \texttt{bibliography/zotero.bib}. New manual legal
+        entries (cases, treaties, regulations, directives, decisions) go in
+        \texttt{bibliography/law.bib}.
+  \item \textbf{Cloud caveat:} xelatex and the Scala Pro font may not be installed
+        in Claude Code on the web sessions. Don't claim a successful build without
+        actually running it --- flag missing toolchain explicitly.
+\end{itemize}
+
+\paragraph{LaTeX skill level: beginner}
+Matteo is new to LaTeX. When touching \texttt{.tex} files or suggesting LaTeX work:
+\begin{itemize}
+  \item Briefly explain what commands/environments/packages do --- don't assume
+        familiarity
+  \item Point out which file change affects what in the compiled PDF
+  \item Prefer simple, readable constructs over clever macros
+  \item Flag when a package needs to be added to \texttt{thesis.tex} preamble
+  \item If a build error appears, explain the error message in plain terms before
+        proposing a fix
+  \item Remember the AI Use Rules still apply: Claude explains LaTeX mechanics,
+        Matteo writes the thesis prose
+\end{itemize}
+
+%----------------------------------------------------------------------
+\subsubsection{Session Startup}
+
+Do this automatically --- never ask Matteo to re-explain the thesis.
+
+\begin{enumerate}
+  \item Read the current draft directly from \texttt{Chapters/chapter\_*.tex} ---
+        \textbf{always re-read}, never rely on cached versions. Skim
+        \texttt{thesis.tex} too: it's the source of truth for which packages and
+        macros are available, so don't suggest a new package without checking the
+        preamble first.
+  \item If doing source work: check Zotero semantic search database status, update
+        if needed
+  \item Check Things 3 for thesis deadlines if relevant
+  \item Check Obsidian notes (\texttt{00 - Thesis Trajectory/}) if relevant
+\end{enumerate}
+
+\paragraph{For structural review}
+\begin{enumerate}
+  \item Read current \texttt{Chapters/chapter\_*.tex} files
+  \item Read the introduction template from Obsidian
+  \item Compare against supervisor feedback points above
+  \item Identify gaps --- do NOT write the text
+\end{enumerate}
+
+\paragraph{For source finding}
+\begin{enumerate}
+  \item \texttt{zotero\_semantic\_search} first (topic discovery)
+  \item \texttt{zotero\_search\_items} for known authors (keep queries short:
+        ``Lynskey 2024'', not long phrases)
+  \item \texttt{zotero\_get\_annotations} to check what Matteo already highlighted
+  \item \texttt{zotero\_get\_pdf\_outline} before \texttt{zotero\_get\_item\_fulltext}
+        to scope what to read
+  \item \textbf{Context warning:} \texttt{zotero\_get\_item\_fulltext} returns 10K+
+        tokens. Avoid on multiple papers per session.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\subsubsection{End of Session}
+
+\begin{itemize}[label={\framebox[1.4ex]{\rule{0pt}{1.1ex}}}]
+  \item Remind Matteo to log this AI interaction (date, tool, prompt, purpose,
+        reflection)
+  \item Update Things 3 if new deadlines or tasks emerged
+  \item Save structural plans to Obsidian if useful for next session
+\end{itemize}
