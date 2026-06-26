@@ -92,6 +92,15 @@
 \renewcommand{\appendixname}{Annex}
 \renewcommand{\appendixtocname}{Annexes}
 
+% Cross-references (load last, after hyperref): \cref{label} auto-prints e.g.
+% "section 2.3.1" and updates if numbering shifts. Force subsection /
+% subsubsection refs to read "section" (not "subsection") to match the prose.
+\usepackage{cleveref}
+\crefname{subsection}{section}{sections}
+\Crefname{subsection}{Section}{Sections}
+\crefname{subsubsection}{section}{sections}
+\Crefname{subsubsection}{Section}{Sections}
+
 \begin{document}
 
 \renewcommand*{\thepage}{Title Page}   % PDF page-label for the title page
